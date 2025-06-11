@@ -8,7 +8,7 @@ This session introduces the fundamental differences between **row-oriented** and
 
 ### 📺 Watch the Session
 
-🔗 [YouTube Live – Session 30](https://www.youtube.com/live/CTLwYjh92xw?si=YRuCKcOk5QCnQoYI)
+🔗 [YouTube – Session 30](https://www.youtube.com/live/CTLwYjh92xw?si=YRuCKcOk5QCnQoYI)
 
 ---
 
