@@ -1,4 +1,4 @@
-# 🎲 Probability Distribution Function (PDF) - Full Session
+# 🎲 Probability Distribution Function - Full Session
 
 Welcome to the **Probability Distribution Function** session! This module is part of the foundational statistics track for data science and machine learning. It covers key concepts like random variables, types of distributions, PDF, PMF, CDF, and density estimation with practical demonstrations.
 
