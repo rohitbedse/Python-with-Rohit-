@@ -10,45 +10,69 @@ This session continues the Pandas series and focuses on **practical DataFrame me
 
 ## 🧠 Key Concepts Covered
 
-```python
-# ✅ Head & Tail
-df.head()         # View top 5 rows
-df.tail(3)        # View last 3 rows
+---
 
-# ✅ Shape and Size
-df.shape          # (rows, columns)
-df.size           # Total number of elements
+**value_counts()** → Returns frequency counts of unique values in a Series.  
+`df['col'].value_counts()`
 
-# ✅ Columns and Index
-df.columns        # List of column names
-df.index          # Range of index
+**sort_values()** → Sorts the DataFrame by column values.  
+`df.sort_values('col', ascending=False)`
 
-# ✅ Data Types
-df.dtypes         # Data types of each column
+**rank()** → Assigns ranks to entries in a Series or DataFrame.  
+`df['col'].rank()`
 
-# ✅ Sorting
-df.sort_values('column_name')               # Sort by column
-df.sort_values(['col1', 'col2'], ascending=[True, False])
+**sort_index()** → Sorts the DataFrame by its index (not values).  
+`df.sort_index(ascending=True)`
 
-# ✅ Aggregations
-df.sum()           # Sum of each column
-df.mean()          # Column-wise mean
-df['col'].value_counts()   # Frequency count
+**set_index()** → Sets one or more columns as the index.  
+`df.set_index('col', inplace=True)`
 
-# ✅ Apply Functions
-df['col'].apply(len)                 # Apply function to column
-df.apply(lambda row: row.sum(), axis=1)  # Row-wise sum
+**rename()** → Renames columns or index entries.  
+`df.rename(columns={'old': 'new'}, index={0: 'first'})`
 
-# ✅ Rename Columns
-df.rename(columns={'old': 'new'}, inplace=True)
+**reset_index()** → Resets the index to default and moves index to a column.  
+`df.reset_index(drop=True, inplace=True)`
 
-# ✅ Replace Values
-df.replace('old', 'new', inplace=True)
+**unique() & nunique()** → `unique()` gives unique values, `nunique()` counts them.  
+`df['col'].unique()`  
+`df['col'].nunique()`
 
-# ✅ Drop Columns / Rows
-df.drop('col_name', axis=1)         # Drop column
-df.drop([0, 1], axis=0)             # Drop rows by index
+**isnull() / notnull() / hasnans** → Checks for missing values.  
+`df.isnull()`, `df.notnull()`, `df.hasnans`
 
-# ✅ Reset & Set Index
-df.reset_index(drop=True, inplace=True)
-df.set_index('column_name', inplace=True)
+**dropna()** → Removes rows or columns with missing values.  
+`df.dropna(axis=0)`  # rows  
+`df.dropna(axis=1)`  # columns
+
+**fillna()** → Fills missing values with specified value or method.  
+`df.fillna(0)`  
+`df.fillna(method='ffill')`
+
+**drop_duplicates()** → Removes duplicate rows.  
+`df.drop_duplicates()`
+
+**drop()** → Drops rows/columns by labels.  
+`df.drop('col', axis=1)`  
+`df.drop([0, 1], axis=0)`
+
+**apply()** → Applies a function to each row/column.  
+`df['col'].apply(lambda x: x * 2)`
+
+**isin()** → Checks whether each element is in a given list.  
+`df['col'].isin([10, 20, 30])`
+
+**corr()** → Computes pairwise correlation between columns.  
+`df.corr()`
+
+**nlargest() / nsmallest()** → Returns rows with largest/smallest values.  
+`df.nlargest(5, 'col')`  
+`df.nsmallest(3, 'col')`
+
+**insert()** → Inserts a new column at a specific position.  
+`df.insert(1, 'new_col', [1,2,3])`
+
+**copy()** → Creates a deep copy of the DataFrame.  
+`df_copy = df.copy()`
+
+---
+
